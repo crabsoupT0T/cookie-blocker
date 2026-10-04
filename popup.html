@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cookie Blocker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="mark" aria-hidden="true"></div>
+    <div>
+      <h1>Cookie Blocker</h1>
+      <p id="status">Loading…</p>
+    </div>
+    <label class="switch">
+      <input id="enabled" type="checkbox" />
+      <span></span>
+    </label>
+  </header>
+
+  <p class="blurb">Blocks every cookie: request headers, Set-Cookie, document.cookie, and the Cookie Store API. Existing cookies are deleted about once a minute.</p>
+
+  <section>
+    <label for="site">Allow a site (optional)</label>
+    <div class="row">
+      <input id="site" type="text" placeholder="example.com" spellcheck="false" />
+      <button id="add" type="button">Add</button>
+    </div>
+    <ul id="list"></ul>
+  </section>
+
+  <button id="purge" type="button" class="ghost">Delete stored cookies now</button>
+  <p id="note"></p>
+  <script src="popup.js"></script>
+</body>
+</html>
